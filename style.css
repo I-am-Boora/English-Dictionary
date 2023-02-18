@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;400;500;600&family=Roboto:wght@300;400;500;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+:root{
+    --bgColor:linear-gradient(45deg,rgb(59, 198, 245), rgb(13, 153, 172));
+    --primaryColor:rgb(59, 198, 245);
+    --secondaryColor:rgb(13, 153, 172);
+}
+.header-section{
+    display: flex;
+    align-items: center;
+    place-content: center;
+    color: white;
+    min-width: 100%;
+    height: 6rem;
+    background:var(--bgColor)
+}
+.header-section h1{
+    padding: 0rem 1rem;
+}
+.container{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    place-content: center;
+   
+}
+.dictionary-container{
+    max-width: 90%;
+    width: 40rem;
+}
+.input-data{
+    display: flex;
+    margin-top: 2rem;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+.input-data input{
+    position: relative;
+    
+    width: 100%;
+    height: 3.8rem;
+    border: 2px solid var(--primaryColor);
+    outline: none;
+    border-radius: 1.5rem;
+    padding: 0rem 1rem;
+    overflow: hidden;
+
+}
+
+input:hover,input:focus{
+    box-shadow: 0rem 0rem 1rem var(--secondaryColor);
+}
+
+.search-btn-container{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    place-content: center;
+    position: absolute;
+    right: 0rem;
+    background: var(--bgColor);
+    border: none;
+    outline: none;
+    right: 0rem;
+    border-bottom-right-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    width: 50px;
+    cursor: pointer;
+}
+.search-btn-container .search-btn{
+    padding: 1rem;
+    color: white;
+    
+ 
+}
+
+.search-btn:active{
+    transform: scale(0.8);
+}
+.search-btn::selection{
+    display: none;
+}
+
+/* Content Container */
+
+.content-container{
+    position: relative;
+    height: 20rem;
+    transition: all .2s ease;
+}
+.active{
+    display: none;
+}
+.word{
+    font-size: 3rem;
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+}
+.phonetic{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    color: var(--primaryColor);
+    font-family: 'poppins',sans-serif;
+}
+.phonetic:nth-child(2){
+    font-size: 1.5rem;
+}
+.phonetic .sound-btn{
+    padding-right:.5rem;
+    font-size: 2rem;
+    color: var(--primaryColor);
+    cursor: pointer;
+}
+.soundBtn-container{
+    border: none;
+    outline: none;
+    background-color: white;
+}
+.line hr{
+    color:var(--primaryColor)
+}
+.defination{
+    position: relative;
+    margin-top: 0.5rem;
+    font-family: 'poppins',sans-serif;
+    font-size: 1.8rem;
+}
+.example1{
+    font-style: italic;
+    margin: 1rem 0rem;
+    font-size: 1.5rem;
+}
+
+
+/* footer section */
+
+.footer-section{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    place-content: center;
+    font-size: 1.2rem;
+    font-family: 'poppins',sans-serif;
+    bottom: 0%;
+    min-width: 100%;
+    color: white;
+    background: var(--bgColor);
+    height: 6rem;
+}
+
+
+/* loader css */
+
+
+
+
+.loading-container{
+    height: 20rem;
+    display: flex;
+    align-items: center;
+    place-content: center;
+    transition: all .2s ease;
+
+}
+.hide{
+    display: none;
+}
+
+.lds-hourglass {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-hourglass:after {
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    margin: 8px;
+    box-sizing: border-box;
+    border: 32px solid var(--primaryColor);
+    border-color:var(--primaryColor) transparent var(--primaryColor) transparent;
+    animation: lds-hourglass 1.2s infinite;
+    transition: all .2s ease;
+  }
+  @keyframes lds-hourglass {
+    0% {
+      transform: rotate(0);
+      animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    50% {
+      transform: rotate(900deg);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    100% {
+      transform: rotate(1800deg);
+    }
+  }
+
+  /* Error message Designing */
+
+.error{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    place-content: center;
+    font-family: 'poppins',sans-serif;
+}
+.error .error-icon{
+    font-size: 8rem;
+    color: gainsboro;
+}
+.error .error-message{
+    font-size: 2rem;
+    color: gainsboro;
+}
+
+.error-hide{
+    display: none;
+}

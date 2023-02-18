@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dictionary</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./dictionary-icon.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="dictionary.js" defer></script>
+  </head>
+
+  <body>
+    <header class="header-section">
+      <h1 class="title">English Dictionary</h1>
+    </header>
+    <div class="container">
+      <div class="dictionary-container">
+        <div class="input-data">
+          <input type="text" placeholder="Search word" />
+          <button class="search-btn-container">
+            <span class="material-icons-outlined material-icons search-btn">
+              search
+            </span>
+          </button>
+        </div>
+        <div class="content-container active">
+          <div class="word"><span>Hello</span></div>
+          <div class="phonetic">
+            <button class="soundBtn-container">
+              <span class="material-icons-outlined material-icons sound-btn">
+                volume_up
+              </span></button
+            ><span class="phonetic-def">phonetic</span
+            ><span class="music"><audio src="" id="sound"></audio></span>
+          </div>
+          <div class="line">
+            <hr />
+          </div>
+          <div class="defination">
+            <p class="word-defination">Hello is a greeting word.</p>
+            <p class="word-defination example1">Hello is a greeting word.</p>
+          </div>
+        </div>
+        <div class="loading-container hide">
+          <div class="loader lds-hourglass"></div>
+        </div>
+        <div class="error error-hide">
+          <span class="error-icon material-symbols-outlined material-icons">
+            sentiment_very_dissatisfied
+          </span>
+          <span class="error-message">Definition not found</span>
+        </div>
+      </div>
+    </div>
+    <footer class="footer-section">
+      <span>EnglishDictionary&copy;2023</span
+      ><span>Developed by Sonu Boora HD</span>
+    </footer>
+  </body>
+</html>
